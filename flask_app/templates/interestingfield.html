@@ -1,0 +1,37 @@
+{% extends "base1.html" %}
+{% block content%}
+    <h3>Electrical Engineering</h3>
+    <div class="interestingfield">
+    <p>Electrical Engineering has become really popular. Some data concerning projects in this field are desplayed here.</p>
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Project ID</td>
+            <td>Project Title</td>
+        </tr>
+         {% for project in interestingfield %}
+            <tr>    
+                <td> {{project[0]}} </td>
+                <td>{{project[1]}} </td>
+             </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+
+<div class="interestingfieldresearchers">
+    <p>The researchers who are occupied in this field are displayed here.</p>
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Researcher's ID</td>
+        </tr>
+         {% for researcher in interestingfield1 %}
+            <tr>    
+                <td> {{researcher[0]}} </td>
+             </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+{%endblock%}

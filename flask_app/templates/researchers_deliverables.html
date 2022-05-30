@@ -1,0 +1,20 @@
+{% extends "base1.html" %}
+{% block content%}
+<div class="researchersdeliverables">
+    <h3>Researchers without Deliverables</h3>
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Full Name</td>
+            <td>Number of Projects</td>
+        </tr>
+        {% for researcher in researchersdeliverables%}
+        <tr> 
+            <td> {{researcher[0]}}</td>
+            <td> {{researcher[1]}}</td>
+        </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+{%endblock%}

@@ -1,0 +1,75 @@
+{% extends "base1.html" %}
+{% block content %}
+<div id="programs-container">
+    <h3>Programs</h3>
+    <form class="form-inline" method="POST" action="{{ url_for('programs') }}">
+        <select class="form-field mr-sm-2" type="text" name="select-program-type" autocomplete=true>
+        {% for program in allprograms %}
+        <option value="{{ program[1] }}" {% if selected_program_type == program[1] %} selected {% endif %}>{{ program[1] }}</option>
+        {% endfor %}
+        </select>
+
+        <div class="form-field input-group mb-3">
+            <span class="input-group-text">Begin date:</span>
+            <input type="date" class="form-control" name="begin_date" value="0">
+        </div>
+        <div class="form-field input-group mb-3">
+            <span class="input-group-text">End date :</span>
+            <input type="date" class="form-control" name="end_date">
+        </div>
+        <div class="form-row5">
+            <div class="form-group col-md-6">
+                <select class="field-select" required name='inputstem'>
+                    <option value="">Choose Stem Name</option>
+                    <option value="101">Jendrys</option>
+                    <option value="102">Porker </option>
+                    <option value="103">Ellsworthe</option>
+                    <option value="104">Paylor</option>
+                    <option value="105">Clynman</option>
+                    <option value="106">Brehault</option>
+                    <option value="107">Towersey</option>
+                    <option value="108">Trowsdale</option>
+                    <option value="109">Snazle</option>
+                    <option value="110">Pettus</option>
+                    <option value="111">Souten</option>
+                    <option value="112">Peckitt</option>
+                    <option value="113">Ducarel</option>
+                    <option value="114">Mulqueen</option>
+                    <option value="115">Van Arsdalen</option>
+                    <option value="116">Borsi</option>
+                    <option value="117">Filyakov</option>
+                    <option value="118">Proudlock</option>
+                    <option value="119">Garrad</option>
+                    <option value="120">Le Hucquet</option>
+                    <option value="121">Kubiczek</option>
+                    <option value="122">Lord </option>
+                    <option value="123">Albiston</option>
+                    <option value="124">Gaffer</option>
+                    <option value="125">Vobes</option>
+                    <option value="126">Beaze</option>
+                    <option value="127">Bewfield</option>
+                </select>
+               
+         </div>
+         </div>
+           
+        <button type="submit" class="btn btn-default btn-light">Go</button>
+
+        <select id="projects-list" multiple class="mr-sm-2" type="text" name="select-project" autocomplete=true onchange="this.form.submit()">
+        {% for project in projects %}
+        <option value="{{ project[1] }}" {% if project == project[1] %} selected {% endif %}>{{ project[1] }}</option>
+        {% endfor %}
+        </select>
+    </form>
+    <ul>
+        {% for res1 in res %}
+        <li>
+            <span>{{ res1[0] }}</span> 
+            <span>{{ res1[1] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
+

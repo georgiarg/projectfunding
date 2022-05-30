@@ -1,0 +1,22 @@
+{% extends "base1.html" %}
+{% block content%}
+<div class="top5stems">
+    <h3>Top 5 stems</h3>
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Stem Name</td>
+            <td>Company Name</td>
+            <td>Total Amount of Money</td>
+        </tr>
+        {% for stem in top5stems%}
+        <tr> 
+            <td> {{stem[0]}}</td>
+            <td> {{stem[1]}}</td>
+            <td> {{stem[2]}}</td>
+        </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+{%endblock%}

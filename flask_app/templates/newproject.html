@@ -1,0 +1,165 @@
+{% extends "base1.html" %}
+{% block content %}
+<div id="newproject-container">
+    <form class="p-2" class="form" method='POST' action= "{{ url_for('newproject') }}">
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputProjectTitle">Project Title</label>
+            <input type="text" class="form-control" name="inputProjectTitle" placeholder="Project Title">
+            
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAmountOfFunding">Amount of Funding</label>
+            <input type="number" class="form-control" name="inputAmountOfFunding" placeholder="Amount of Funding">
+        </div>
+        </div>
+        <div class="form-group col-md-6">
+        <label for="inputBeginDate">Begin date</label>
+        <input type="date" class="form-control" name="inputBeginDate" placeholder="Begin date">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEndDate">End date</label>
+            <input type="date" class="form-control" name="inputEndDate" placeholder="End date">
+            </div>
+        <div class="form-group col-md-6">
+        <label for="inputSummary">Project's Summary </label>
+        <input type="text" class="form-control" name="inputSummary" placeholder="Summary">
+        </div>
+        <div class="form-row1">
+        <div class="form-group col-md-6">
+            <label for="inputIDofResearcherManager">Researcher-Manager's ID (Example: 3119020)</label>
+            <input type="text" class="form-control" name="inputIDofResearcherManager" min="3119000.0">
+        </div>
+        </div>
+        <div class="form-row2">
+            <div class="form-group col-md-6">
+                <select class="field-select" required name='inputIDofOrganization'>
+                    <option value="">Choose Organization Name</option>
+                    <option value="1001">Cardify</option>
+                    <option value="1002">Andalax</option>
+                    <option value="1003">Treeflex</option>
+                    <option value="1004">Overhold</option>
+                    <option value="1005">Veribet</option>
+                    <option value="1006">Temp</option>
+                    <option value="1007">Domainer</option>
+                    <option value="1008">Y-Solowarm</option>
+                    <option value="1009">Sonsing</option>
+                    <option value="1010">Stringtough</option>
+                    <option value="1011">Prodder</option>
+                    <option value="1012">Subin(SN)</option>
+                    <option value="1013">Zoolab</option>
+                    <option value="1014">Ronstring</option>
+                    <option value="1015">Voyatouch</option>
+                    <option value="1016">Zaam-Dox</option>
+                    <option value="1017">Bamity</option>
+                    <option value="1018">Cookley</option>
+                    <option value="1019">Subin(Sub)</option>
+                    <option value="1020">Stim</option>
+                    <option value="1021">Andalaxo</option>
+                    <option value="1022">Flowdesk</option>
+                    <option value="1023">Treeflex(Tripx)</option>
+                    <option value="1024">Redhold</option>
+                    <option value="1025">Andalax(Anda)</option>
+                    <option value="1026">Ventosanzap</option>
+                    <option value="1027">Bitchip</option>
+                    <option value="1028">Daltfresh</option>
+                    <option value="1029">Hatity</option>
+                </select>
+            </div>
+        
+            <div class="form-row3">
+                <div class="form-group col-md-6">
+                    <select class="field-select" required name='inputIDofProgram'>
+                        <option value="">Choose Program Name</option>
+                        <option value="2000">Program 1</option>
+                        <option value="2001">Program 2</option>
+                        <option value="2002">Program 3 </option>
+                        <option value="2003">Program 4</option>
+                        <option value="2004">Program 5</option>
+                        <option value="2005">Program 6</option>
+                        <option value="2006">Program 7</option>
+                        <option value="2007">Program 8</option>
+                        <option value="2008">Program 9</option>
+                        <option value="2009">Program 10</option>
+                        <option value="2010">Program 11</option>
+                        <option value="2011">Program 12</option>
+                        <option value="2012">Program 13</option>
+                        <option value="2013">Program 14</option>
+                        <option value="2014">Program 15</option>
+                        <option value="2015">Program 16</option>
+                        <option value="2016">Program 17</option>
+                        <option value="2017">Program 18</option>
+                        <option value="2018">Program 19</option>
+                        <option value="2019">Program 20</option>
+                        <option value="2020">Program 21</option>
+                        <option value="2021">Program 22</option>
+                        <option value="2022">Program 23 </option>
+                        <option value="2023">Program 24</option>
+                        <option value="2024">Program 25</option>
+                        <option value="2025">Program 26</option>
+                        <option value="2026">Program 27</option>
+                        <option value="2027">Program 28</option>
+                        <option value="2028">Program 29</option>
+                        <option value="2029">Program 30</option>
+                    </select>
+                </div>
+             <div class="form-row5">
+                <div class="form-group col-md-6">
+                    <select class="field-select" required name='inputIDofResponsibleStem'>
+                        <option value="">Choose Stem Name</option>
+                        <option value="101">Jendrys</option>
+                        <option value="102">Porker </option>
+                        <option value="103">Ellsworthe</option>
+                        <option value="104">Paylor</option>
+                        <option value="105">Clynman</option>
+                        <option value="106">Brehault</option>
+                        <option value="107">Towersey</option>
+                        <option value="108">Trowsdale</option>
+                        <option value="109">Snazle</option>
+                        <option value="110">Pettus</option>
+                        <option value="111">Souten</option>
+                        <option value="112">Peckitt</option>
+                        <option value="113">Ducarel</option>
+                        <option value="114">Mulqueen</option>
+                        <option value="115">Van Arsdalen</option>
+                        <option value="116">Borsi</option>
+                        <option value="117">Filyakov</option>
+                        <option value="118">Proudlock</option>
+                        <option value="119">Garrad</option>
+                        <option value="120">Le Hucquet</option>
+                        <option value="121">Kubiczek</option>
+                        <option value="122">Lord </option>
+                        <option value="123">Albiston</option>
+                        <option value="124">Gaffer</option>
+                        <option value="125">Vobes</option>
+                        <option value="126">Beaze</option>
+                        <option value="127">Bewfield</option>
+                    </select>
+                   
+             </div>
+             </div>
+               
+             <div class="form-row5">
+                <div class="form-group col-md-6">
+                    <select class="field-select" required name='inputIDofScientificField'>
+                        <option value="">Choose Scientific Field</option>
+                        <option value="527350">Civil Engineering</option>
+                        <option value="527351">Mathematics</option>
+                        <option value="527352">Psychology</option>
+                        <option value="527353">Language</option>
+                        <option value="527354">Physics</option>
+                        <option value="527355">Electrical Engineering</option>
+                        <option value="527356">History</option>
+                        <option value="527357">Informatics</option>
+                        <option value="527358">Astronomy</option>
+                        <option value="527359">Medical Sciences</option>
+                    </select>
+                </div>
+            
+        
+        <div class="form-group my-4">
+            <button type="submit" class="btn btn-primary"> Register Project</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
