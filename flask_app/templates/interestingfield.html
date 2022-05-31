@@ -1,0 +1,62 @@
+{% extends "base1.html" %}
+{% block content%}
+    <h3>Interesting Field</h3>
+    <form class="p-2" class="form" method='POST' action= "{{ url_for('interestingfield') }}">
+    <div class="form-row5">
+        <div class="form-group col-md-6">
+            <select class="field-select" required name='selectfield'>
+                <option value="">Choose Scientific Field</option>
+                <option value="527350">Civil Engineering</option>
+                <option value="527351">Mathematics</option>
+                <option value="527352">Psychology</option>
+                <option value="527353">Language</option>
+                <option value="527354">Physics</option>
+                <option value="527355">Electrical Engineering</option>
+                <option value="527356">History</option>
+                <option value="527357">Informatics</option>
+                <option value="527358">Astronomy</option>
+                <option value="527359">Medical Sciences</option>
+            </select>
+        </div>
+    
+
+        <div class="form-group my-4">
+          <button type="submit" class="btn btn-primary">Choose</button>
+        </div>
+    </form>
+    <div class="interestingfield">
+        
+    <p>This field has become really popular. Some data concerning projects in this field are displayed here.</p>
+
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Project ID</td>
+            <td>Project Title</td>
+        </tr>
+         {% for project in interestingfield %}
+            <tr>    
+                <td> {{project[0]}} </td>
+                <td>{{project[1]}} </td>
+             </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+
+<div class="interestingfieldresearchers">
+    <p>The researchers who are occupied in this field are displayed here.</p>
+    <table class="table table-sm table-borderless">
+        <thead>
+        <tr>
+            <td>Researcher's ID</td>
+        </tr>
+         {% for researcher in interestingfield1 %}
+            <tr>    
+                <td> {{researcher[0]}} </td>
+             </tr>
+        {% endfor %}
+    </thead>
+    </table>
+</div>
+{%endblock%}
