@@ -1,0 +1,6 @@
+CREATE INDEX idx_project_id ON Project$(Project_ID)
+CREATE INDEX idx_researcher_id ON Researcher$(Researcher_ID)
+CREATE INDEX idx_organization_id ON Organization$(Organization_ID)
+CREATE INDEX idx_scientific_field_id ON Scientific_field$(Scientific_field_ID)
+CREATE INDEX idx_evaluation_id ON Evaluation$(Evaluation_ID)
+CREATE INDEX idx_stem_id ON Stem$(Stem_ID)
